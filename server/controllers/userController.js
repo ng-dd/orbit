@@ -1,4 +1,5 @@
 const User = require('../db/index').user;
+const redis = require('../redis.js');
 
 module.exports = {
     addUser: (req, res) => {
@@ -25,14 +26,19 @@ module.exports = {
     },
 
     getUser: (req, res) => {
-        User.findAll({
-            where: {username: req.params.name}
-        })
+        redis.redisClient.get(req.params.id)
         .then((data) => {
-            res.send(data)
-        })
-        .catch(err => {
-            res.status(500).send(err)
+            if (data === 'null') {
+                User.findAll({where: {id: req.params.id}})
+                .then((data) => {
+                    redis.redisClient.set(`userData${req.params.id}`, data)
+                })
+                .catch((err) => {
+                    res.statis(500).send(err);
+                })
+            } else {
+                res.send(JSON.parse(data))
+            }
         })
     },
 

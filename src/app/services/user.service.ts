@@ -7,7 +7,7 @@ export class UserService {
   constructor(private http: Http) { }
   
   getUser(user) {
-    this.http.get('/users')
+    this.http.get(`/users/${user.id}`)
     .subscribe((data) => {
       console.log(data)
     }, (err) => {

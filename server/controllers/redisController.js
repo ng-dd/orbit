@@ -7,8 +7,7 @@ module.exports = {
            if (reply !== null) {
                res.send(reply);
            } else {
-               console.log(err)
-               res.status(404).send()
+               
            }
         })
     },

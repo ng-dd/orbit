@@ -28,7 +28,7 @@ import { MessageService } from './services/message.service'
 import { FriendService } from './services/friend.service'
 import { CategoryService } from './services/category.service'
 import { RoomstatService } from './services/roomstat.service'
-import { TestingdanielComponent } from './testingdaniel/testingdaniel.component';
+import { TestingComponent } from './testing/testing.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +45,7 @@ import { TestingdanielComponent } from './testingdaniel/testingdaniel.component'
     StreamViewComponent,
     StreamChatLogComponent,
     SingleCelebFeedComponent,
-    TestingdanielComponent
+    TestingComponent
   ],
   imports: [
     BrowserModule,

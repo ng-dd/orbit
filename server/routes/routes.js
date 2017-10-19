@@ -9,41 +9,41 @@ const categoryController = require('../controllers/categoryController');
 const roomstatController = require('../controllers/roomstatController');
 
 //redis router?
-router.get('/getcache', redisController.getSomething);
+router.get('/getcache/:id', redisController.getSomething);
 router.post('/postcache', redisController.postSomething);
 
 //user routes
-router.get('/users', userController.getUser);
+router.get('/users/:id', userController.getUser);
 router.post('/users', userController.addUser);
 router.delete('/users', userController.deleteUser);
 
 //posts
-router.get('/posts', postController.getPost);
+router.get('/posts/:id', postController.getPost);
 router.post('/posts', postController.addPost);
 router.delete('/posts', postController.deletePost);
 
 //likes
-router.get('/likes', likeController.getLike);
+router.get('/likes/:id', likeController.getLike);
 router.post('/likes', likeController.addLike);
 router.delete('/likes', likeController.deleteLike);
 
 //message
-router.get('/messages', messageController.addMessage);
-router.post('/messages', messageController.postMessage);
-router.delete('/messages', messageController.delete);
+router.get('/messages/:id', messageController.getMessage);
+router.post('/messages', messageController.addMessage);
+router.delete('/messages', messageController.deleteMessage);
 
 //friend
-router.get('/friends', friendController.getFriend)
+router.get('/friends/:id', friendController.getFriend)
 router.post('/friends', friendController.addFriend)
 router.delete('/friends', friendController.deleteFriend)
 
 //categories
-router.get('/categories', categoryController.getCategory)
-router.post('/categories', categoryController.postCategory)
+router.get('/categories/:id', categoryController.getCategory)
+router.post('/categories', categoryController.addCategory)
 router.delete('/categories', categoryController.deleteCategory)
 
 //roomstat
-router.get('/rooms', roomstatController.getRoomstat)
+router.get('/rooms/:id', roomstatController.getRoomstat)
 router.post('/rooms', roomstatController.addRoomstat)
 router.delete('/rooms', roomstatController.deleteRoomstat)
 
