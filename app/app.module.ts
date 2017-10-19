@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NativeScriptModule } from "nativescript-angular/nativescript.module";
+import { HttpModule }  from '@angular/http';
 
 import { AppComponent } from './app.component';
 // import { ContentItemComponent } from './content-item/content-item.component';
@@ -15,6 +16,15 @@ import { NotificationsComponent } from './notifications/notifications.component'
 import { StreamViewComponent } from './stream-view/stream-view.component';
 import { StreamChatLogComponent } from './stream-chat-log/stream-chat-log.component';
 import { SingleCelebFeedComponent } from './single-celeb-feed/single-celeb-feed.component';
+
+//services
+import { UserService } from './services/user.service'
+import { PostService } from './services/post.service'
+import { LikesService } from './services/likes.service'
+import { MessageService } from './services/message.service'
+import { FriendService } from './services/friend.service'
+import { CategoryService } from './services/category.service'
+import { RoomstatService } from './services/roomstat.service'
 
 @NgModule({
   declarations: [
@@ -33,9 +43,18 @@ import { SingleCelebFeedComponent } from './single-celeb-feed/single-celeb-feed.
     SingleCelebFeedComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [
+    UserService,
+    PostService,
+    LikesService,
+    MessageService,
+    FriendService,
+    CategoryService,
+    RoomstatService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

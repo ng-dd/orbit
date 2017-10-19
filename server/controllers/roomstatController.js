@@ -19,7 +19,7 @@ module.exports = {
 
     getRoomstat: (req, res) => {
         RoomStat.findAll({
-            where: {room_id: req.body.roomId}
+            where: {room_id: req.params.id}
         })
         .then((data) => {
             res.send(data)

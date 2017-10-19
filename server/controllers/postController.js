@@ -13,7 +13,7 @@ module.exports = {
 
     getPost: (req, res) => {
         Post.findAll({
-            where: {post_url: req.params.name}
+            where: {post_url: req.params.id}
         })
         .then((data) => {
             res.send(data)
@@ -25,7 +25,7 @@ module.exports = {
 
     deletePost: (req, res) => {
         Post.destroy({
-            where: {id: req.params.postId}
+            where: {id: req.params.id}
         })
         .then(() => {
             res.send('deleted post')

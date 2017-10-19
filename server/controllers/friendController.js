@@ -16,7 +16,7 @@ module.exports = {
 
     getFriend: (req, res) => {
         Friend.findAll({
-            where: {user_id: req.params.userId}
+            where: {user_id: req.params.id}
         })
         .then((data) => {
             res.send(data)
@@ -28,7 +28,7 @@ module.exports = {
 
     deleteFriend: (req, res) => {
         Friend.destroy({
-            where: {id: req.params.userId}
+            where: {id: req.params.id}
         })
         .then(() => {
             res.send('deleted friend')

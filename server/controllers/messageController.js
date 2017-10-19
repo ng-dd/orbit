@@ -12,7 +12,7 @@ module.exports = {
 
     getMessage: (req, res) => {
         Message.findAll({
-            where: {user_id: req.params.userId}
+            where: {user_id: req.params.id}
         })
         .then((data) => {
             res.send(data)

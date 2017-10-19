@@ -15,7 +15,7 @@ module.exports = {
 
     getCategory: (req, res) => {
         Category.findAll({
-            where: {name: req.params.name}
+            where: {name: req.params.id}
         })
         .then((data) => {
             res.send(data)
