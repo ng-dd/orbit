@@ -8,11 +8,32 @@ redisClient.on('error', (err) => {
     console.log('error', err)
 })
 
-// redisClient.set('haha', 'hehehe')
-// redisClient.get('haha', (err, reply) => {
-//     if (reply) {
-//         console.log(reply)
+// let promiser = (resolve, reject) => {
+//     return (err, data) => {
+//         if(err) reject (err);
+//         resolve(data);
 //     }
-// })
+// }
+
+// var get = (key) => {
+//     return new Promise((resolve, reject) => {
+//       client.get(key, promiser(resolve, reject));
+//     });
+// };
+  
+// var hgetall = (key) => {
+//     return new Promise((resolve, reject) => {
+//       if(key === null) reject();
+//       client.hgetall(key, promiser(resolve, reject));
+//     });
+// };
+  
+// var zrevrangebyscore = (key, max, min) => {
+//     return new Promise((resolve, reject) => {
+//       client.zrevrangebyscore(key, max, min, promiser(resolve, reject));
+//     });
+// };
+
+
 
 module.exports = {redisClient}
