@@ -2,6 +2,8 @@
 /Users/gabrielkatz/Desktop/orbit/orbit/platforms/android/src/main/assets/app/app.component.spec.js
 /Users/gabrielkatz/Desktop/orbit/orbit/platforms/android/src/main/assets/app/app.module.js
 /Users/gabrielkatz/Desktop/orbit/orbit/platforms/android/src/main/assets/app/main.js
+/Users/gabrielkatz/Desktop/orbit/orbit/platforms/android/src/main/assets/app/vendor-platform.js
+/Users/gabrielkatz/Desktop/orbit/orbit/platforms/android/src/main/assets/app/vendor.js
 /Users/gabrielkatz/Desktop/orbit/orbit/platforms/android/src/main/assets/app/content-feed/content-feed.component.js
 /Users/gabrielkatz/Desktop/orbit/orbit/platforms/android/src/main/assets/app/content-feed/content-feed.component.spec.js
 /Users/gabrielkatz/Desktop/orbit/orbit/platforms/android/src/main/assets/app/content-item/content-item.component.js
@@ -24,6 +26,13 @@
 /Users/gabrielkatz/Desktop/orbit/orbit/platforms/android/src/main/assets/app/search-bar/search-bar.component.js
 /Users/gabrielkatz/Desktop/orbit/orbit/platforms/android/src/main/assets/app/search-bar/search-bar.component.spec.js
 /Users/gabrielkatz/Desktop/orbit/orbit/platforms/android/src/main/assets/app/services/auth.services.js
+/Users/gabrielkatz/Desktop/orbit/orbit/platforms/android/src/main/assets/app/services/category.service.js
+/Users/gabrielkatz/Desktop/orbit/orbit/platforms/android/src/main/assets/app/services/friend.service.js
+/Users/gabrielkatz/Desktop/orbit/orbit/platforms/android/src/main/assets/app/services/likes.service.js
+/Users/gabrielkatz/Desktop/orbit/orbit/platforms/android/src/main/assets/app/services/message.service.js
+/Users/gabrielkatz/Desktop/orbit/orbit/platforms/android/src/main/assets/app/services/post.service.js
+/Users/gabrielkatz/Desktop/orbit/orbit/platforms/android/src/main/assets/app/services/roomstat.service.js
+/Users/gabrielkatz/Desktop/orbit/orbit/platforms/android/src/main/assets/app/services/user.service.js
 /Users/gabrielkatz/Desktop/orbit/orbit/platforms/android/src/main/assets/app/single-celeb-feed/single-celeb-feed.component.js
 /Users/gabrielkatz/Desktop/orbit/orbit/platforms/android/src/main/assets/app/single-celeb-feed/single-celeb-feed.component.spec.js
 /Users/gabrielkatz/Desktop/orbit/orbit/platforms/android/src/main/assets/app/stream-chat-log/stream-chat-log.component.js

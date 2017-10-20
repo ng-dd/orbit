@@ -1,8 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 import { NativeScriptModule } from "nativescript-angular/nativescript.module";
-import { HttpModule }  from '@angular/http';
+import { NativeScriptHttpModule } from "nativescript-angular/http";
 
+import { RoutingModule } from "./routing/routing.module";
 import { AppComponent } from './app.component';
 // import { ContentItemComponent } from './content-item/content-item.component';
 import { ContentFeedComponent } from './content-feed/content-feed.component';
@@ -27,9 +28,9 @@ import { CategoryService } from './services/category.service'
 import { RoomstatService } from './services/roomstat.service'
 
 @NgModule({
+  bootstrap: [AppComponent],
   declarations: [
     AppComponent,
-    // ContentItemComponent,
     ContentFeedComponent,
     ProfileViewComponent,
     UserSettingsComponent,
@@ -44,7 +45,8 @@ import { RoomstatService } from './services/roomstat.service'
   ],
   imports: [
     BrowserModule,
-    HttpModule
+    NativeScriptModule,
+    RoutingModule
   ],
   providers: [
     UserService,
@@ -53,8 +55,10 @@ import { RoomstatService } from './services/roomstat.service'
     MessageService,
     FriendService,
     CategoryService,
-    RoomstatService
+    RoomstatService,
   ],
-  bootstrap: [AppComponent]
+  schemas: [
+    NO_ERRORS_SCHEMA,
+  ]
 })
 export class AppModule { }
