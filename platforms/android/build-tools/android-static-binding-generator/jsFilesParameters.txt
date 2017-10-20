@@ -8,6 +8,9 @@
 /Users/gabrielkatz/Desktop/orbit/orbit/platforms/android/src/main/assets/app/content-feed/content-feed.component.spec.js
 /Users/gabrielkatz/Desktop/orbit/orbit/platforms/android/src/main/assets/app/content-item/content-item.component.js
 /Users/gabrielkatz/Desktop/orbit/orbit/platforms/android/src/main/assets/app/content-item/content-item.component.spec.js
+/Users/gabrielkatz/Desktop/orbit/orbit/platforms/android/src/main/assets/app/environments/environment.js
+/Users/gabrielkatz/Desktop/orbit/orbit/platforms/android/src/main/assets/app/environments/environment.prod.js
+/Users/gabrielkatz/Desktop/orbit/orbit/platforms/android/src/main/assets/app/environments/firebase.config.js
 /Users/gabrielkatz/Desktop/orbit/orbit/platforms/android/src/main/assets/app/friends-list/friends-list.component.js
 /Users/gabrielkatz/Desktop/orbit/orbit/platforms/android/src/main/assets/app/friends-list/friends-list.component.spec.js
 /Users/gabrielkatz/Desktop/orbit/orbit/platforms/android/src/main/assets/app/hooks/after-watch/nativescript-dev-typescript.js
