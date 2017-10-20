@@ -1,7 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 import { NativeScriptModule } from "nativescript-angular/nativescript.module";
+import { NativeScriptHttpModule } from "nativescript-angular/http";
 
+import { RoutingModule } from "./routing/routing.module";
 import { AppComponent } from './app.component';
 // import { ContentItemComponent } from './content-item/content-item.component';
 import { ContentFeedComponent } from './content-feed/content-feed.component';
@@ -16,10 +18,19 @@ import { StreamViewComponent } from './stream-view/stream-view.component';
 import { StreamChatLogComponent } from './stream-chat-log/stream-chat-log.component';
 import { SingleCelebFeedComponent } from './single-celeb-feed/single-celeb-feed.component';
 
+//services
+import { UserService } from './services/user.service'
+import { PostService } from './services/post.service'
+import { LikesService } from './services/likes.service'
+import { MessageService } from './services/message.service'
+import { FriendService } from './services/friend.service'
+import { CategoryService } from './services/category.service'
+import { RoomstatService } from './services/roomstat.service'
+
 @NgModule({
+  bootstrap: [AppComponent],
   declarations: [
     AppComponent,
-    // ContentItemComponent,
     ContentFeedComponent,
     ProfileViewComponent,
     UserSettingsComponent,
@@ -33,9 +44,21 @@ import { SingleCelebFeedComponent } from './single-celeb-feed/single-celeb-feed.
     SingleCelebFeedComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    NativeScriptModule,
+    RoutingModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    UserService,
+    PostService,
+    LikesService,
+    MessageService,
+    FriendService,
+    CategoryService,
+    RoomstatService,
+  ],
+  schemas: [
+    NO_ERRORS_SCHEMA,
+  ]
 })
 export class AppModule { }

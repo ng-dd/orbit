@@ -1,13 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-<<<<<<< cb4aa0023219d280a3f18448c6a59a2c2c14eaa7:platforms/android/build/intermediates/assets/F0/debug/app/app.module.ts
+import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 import { NativeScriptModule } from "nativescript-angular/nativescript.module";
-=======
-import { HttpModule }  from '@angular/http';
->>>>>>> services controllers and routes:src/app/app.module.ts
+import { NativeScriptHttpModule } from "nativescript-angular/http";
 
+import { RoutingModule } from "./routing/routing.module";
 import { AppComponent } from './app.component';
-import { ContentItemComponent } from './content-item/content-item.component';
+// import { ContentItemComponent } from './content-item/content-item.component';
 import { ContentFeedComponent } from './content-feed/content-feed.component';
 import { ProfileViewComponent } from './profile-view/profile-view.component';
 import { UserSettingsComponent } from './user-settings/user-settings.component';
@@ -28,12 +26,11 @@ import { MessageService } from './services/message.service'
 import { FriendService } from './services/friend.service'
 import { CategoryService } from './services/category.service'
 import { RoomstatService } from './services/roomstat.service'
-import { TestingComponent } from './testing/testing.component';
 
 @NgModule({
+  bootstrap: [AppComponent],
   declarations: [
     AppComponent,
-    ContentItemComponent,
     ContentFeedComponent,
     ProfileViewComponent,
     UserSettingsComponent,
@@ -44,12 +41,12 @@ import { TestingComponent } from './testing/testing.component';
     NotificationsComponent,
     StreamViewComponent,
     StreamChatLogComponent,
-    SingleCelebFeedComponent,
-    TestingComponent
+    SingleCelebFeedComponent
   ],
   imports: [
     BrowserModule,
-    HttpModule
+    NativeScriptModule,
+    RoutingModule
   ],
   providers: [
     UserService,
@@ -58,8 +55,10 @@ import { TestingComponent } from './testing/testing.component';
     MessageService,
     FriendService,
     CategoryService,
-    RoomstatService
+    RoomstatService,
   ],
-  bootstrap: [AppComponent]
+  schemas: [
+    NO_ERRORS_SCHEMA,
+  ]
 })
 export class AppModule { }

@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.firebaseConfig = {
+    apiKey: "AIzaSyCJUgy5y0LkJOTrixub99WyiXdk8ZJtSTw",
+    authDomain: "orbit-70993.firebaseapp.com",
+    databaseURL: "https://orbit-70993.firebaseio.com",
+    projectId: "orbit-70993",
+    storageBucket: "orbit-70993.appspot.com",
+    messagingSenderId: "584543309549"
+};
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZmlyZWJhc2UuY29uZmlnLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiZmlyZWJhc2UuY29uZmlnLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQWEsUUFBQSxjQUFjLEdBQUc7SUFDMUIsTUFBTSxFQUFFLHlDQUF5QztJQUNqRCxVQUFVLEVBQUUsNkJBQTZCO0lBQ3pDLFdBQVcsRUFBRSxvQ0FBb0M7SUFDakQsU0FBUyxFQUFFLGFBQWE7SUFDeEIsYUFBYSxFQUFFLHlCQUF5QjtJQUN4QyxpQkFBaUIsRUFBRSxjQUFjO0NBQ3BDLENBQUEiLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgY29uc3QgZmlyZWJhc2VDb25maWcgPSB7XG4gICAgYXBpS2V5OiBcIkFJemFTeUNKVWd5NXkwTGtKT1RyaXh1Yjk5V3lpWGRrOFpKdFNUd1wiLFxuICAgIGF1dGhEb21haW46IFwib3JiaXQtNzA5OTMuZmlyZWJhc2VhcHAuY29tXCIsXG4gICAgZGF0YWJhc2VVUkw6IFwiaHR0cHM6Ly9vcmJpdC03MDk5My5maXJlYmFzZWlvLmNvbVwiLFxuICAgIHByb2plY3RJZDogXCJvcmJpdC03MDk5M1wiLFxuICAgIHN0b3JhZ2VCdWNrZXQ6IFwib3JiaXQtNzA5OTMuYXBwc3BvdC5jb21cIixcbiAgICBtZXNzYWdpbmdTZW5kZXJJZDogXCI1ODQ1NDMzMDk1NDlcIlxufSJdfQ==
