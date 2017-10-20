@@ -2,6 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 import { NativeScriptHttpModule } from "nativescript-angular/http";
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { firebaseConfig } from './environments/firebase.config'
+import { AngularFireModule } from 'angularfire2';
 
 import { RoutingModule } from "./routing/routing.module";
 import { AppComponent } from './app.component';
@@ -26,6 +29,7 @@ import { MessageService } from './services/message.service'
 import { FriendService } from './services/friend.service'
 import { CategoryService } from './services/category.service'
 import { RoomstatService } from './services/roomstat.service'
+import { AuthService } from './services/auth.services'
 
 @NgModule({
   bootstrap: [AppComponent],
@@ -46,9 +50,12 @@ import { RoomstatService } from './services/roomstat.service'
   imports: [
     BrowserModule,
     NativeScriptModule,
-    RoutingModule
+    RoutingModule,
+    AngularFireModule.initializeApp(firebaseConfig), // imports firebase/app needed for everything
+    AngularFireAuthModule, // imports firebase/auth, only needed for auth features
   ],
   providers: [
+    AuthService,
     UserService,
     PostService,
     LikesService,
